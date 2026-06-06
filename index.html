@@ -3,17 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>css</title>
+    <title>Product Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            color: #ff3300;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .buy-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff3300;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .buy-btn:hover {
+            background-color: #cc2900;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h
 
-<style>
-    body{
-        background-color: blue;
-    }
-    hl{
-        color:beige
-    }
-</style>
+    <div class="container">
+        
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300" alt="Headphone">
+            <div class="product-info">
+                <div class="product-name">Wireless Headphone</div>
+                <div class="product-price">Rs. 2,500</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Watch">
+            <div class="product-info">
+                <div class="product-name">Smart Watch</div>
+                <div class="product-price">Rs. 4,999</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1585155770447-2f66e2a397b5?w=300" alt="Shoes">
+            <div class="product-info">
+                <div class="product-name">Sports Shoes</div>
+                <div class="product-price">Rs. 3,200</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Earphone">
+            <div class="product-info">
+                <div class="product-name">Bluetooth Earphone</div>
+                <div class="product-price">Rs. 1,800</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
 </html>
